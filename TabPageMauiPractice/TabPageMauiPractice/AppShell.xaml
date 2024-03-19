@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TabPageMauiPractice.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:TabPageMauiPractice.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="TabPageMauiPractice">
+
+    <FlyoutItem>
+        <ShellContent
+            Title="Page1"
+            Icon="page1"
+            ContentTemplate="{DataTemplate views:Page1}"
+            Route="Page1"/>
+
+        <ShellContent
+            Title="Page2"
+            Icon="page2"
+            ContentTemplate="{DataTemplate views:Page2}"
+            Route="Page2"/>
+
+        <Tab
+            Title="Page3"
+            Icon="page3"
+            Route="Page3">
+            <ShellContent
+                Title="Sub Page 1"
+                ContentTemplate="{DataTemplate views:SubPage1}"/>
+
+            <ShellContent
+                Title="Sub Page 2"
+                ContentTemplate="{DataTemplate views:SubPage2}"/>
+
+            <ShellContent
+                Title="Sub Page 3"
+                ContentTemplate="{DataTemplate views:SubPage3}"/>
+        </Tab>
+
+        <ShellContent
+            Title="Page4"
+            Icon="page4"
+            ContentTemplate="{DataTemplate views:Page4}"
+            Route="Page4" />
+
+        <ShellContent
+            Title="Page5"
+            Icon="page5"
+            ContentTemplate="{DataTemplate views:Page5}"
+            Route="Page5" />
+
+    </FlyoutItem>
+
+</Shell>
+

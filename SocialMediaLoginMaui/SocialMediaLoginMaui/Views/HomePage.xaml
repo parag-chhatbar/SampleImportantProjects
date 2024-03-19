@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SocialMediaLoginMaui.Views.HomePage"
+    Title="HomePage">
+    <StackLayout
+        Orientation="Vertical"
+        VerticalOptions="CenterAndExpand"
+        Spacing="5"
+        Padding="14">
+        <Label
+            Style="{StaticResource CommonBoldLabelExtraLarge}"
+            HorizontalOptions="CenterAndExpand"
+            Text="{Binding UserName, StringFormat='Welcome {0}'}" />
+
+        <Image
+            Source="{Binding ProfilePhoto}"
+            HorizontalOptions="CenterAndExpand"
+            HeightRequest="100"
+            WidthRequest="100"/>
+
+        <Button
+            Text="Logout"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="{StaticResource RedTransparentColor}"
+            TextColor="{StaticResource WhiteTextColor}"
+            Command="{Binding SignoutCommand}" />
+    </StackLayout>
+</ContentPage>

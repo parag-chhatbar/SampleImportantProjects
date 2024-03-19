@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SocialMediaLoginMaui.CommonViews.CommonSignupButton"
+    Style="{StaticResource CommonWhiteFrame}"
+    BackgroundColor="{Binding FrameBackColor}"
+    BorderColor="{Binding FrameBackColor}"
+    HeightRequest="40"
+    WidthRequest="{OnIdiom Tablet=250, Phone=-1}"
+    Margin="0,2"
+    Padding="50,5"
+    CornerRadius="20"
+    HorizontalOptions="{OnIdiom Tablet=Center, Phone=FillAndExpand}">
+    <Frame.GestureRecognizers>
+        <TapGestureRecognizer
+            NumberOfTapsRequired="1"
+            Command="{Binding FrameTappedCommand}" />
+    </Frame.GestureRecognizers>
+    <StackLayout
+        Orientation="Horizontal"
+        HorizontalOptions="FillAndExpand"
+        InputTransparent="True">
+        <Image
+            x:Name="ImgIcon"
+            Grid.Column="0"
+            Source="{Binding IconImgSource}"
+            Aspect="AspectFill"
+            HorizontalOptions="Start"
+            VerticalOptions="CenterAndExpand"
+            HeightRequest="24"
+            WidthRequest="24"
+            InputTransparent="True" />
+        <Label
+            x:Name="LblMessage"
+            Grid.Column="1"
+            Style="{StaticResource CommonBoldLabelExtraLarge}"
+            Text="{Binding SignUpLabelMessage}"
+            TextColor="{Binding LabelMessageTextColor}"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            VerticalOptions="FillAndExpand"
+            InputTransparent="True" />
+    </StackLayout>
+</Frame>

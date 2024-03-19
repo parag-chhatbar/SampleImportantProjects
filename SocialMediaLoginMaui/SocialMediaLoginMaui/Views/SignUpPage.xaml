@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:CommonView="clr-namespace:SocialMediaLoginMaui.CommonViews"
+    x:Class="SocialMediaLoginMaui.Views.SignUpPage"
+    x:Name="SignUpContentPage"
+    Title="SignUpPage">
+    <VerticalStackLayout
+        VerticalOptions="CenterAndExpand"
+        Spacing="5"
+        Padding="14">
+        <CommonView:CommonSignupButton
+            SignUpLabelMessage="Join Free With Google"
+            FrameBackColor="{StaticResource RedTransparentColor}"
+            LabelMessageTextColor="{StaticResource WhiteTextColor}"
+            FrameTappedCommand="{Binding Path=BindingContext.GoogleClickedCommand, Source={x:Reference SignUpContentPage}}">
+            <CommonView:CommonSignupButton.IconImgSource>
+                <FontImageSource
+                    FontFamily="FontAwesomeBrands"
+                    Glyph="{StaticResource Google}"
+                    Size="30"
+                    Color="{StaticResource White}" />
+            </CommonView:CommonSignupButton.IconImgSource>
+        </CommonView:CommonSignupButton>
+
+        <CommonView:CommonSignupButton
+            SignUpLabelMessage="Join Free With Facebook"
+            FrameBackColor="{StaticResource FBBlueTransparentColor}"
+            LabelMessageTextColor="{StaticResource WhiteTextColor}"
+            FrameTappedCommand="{Binding Path=BindingContext.FacebookClickedCommand,
+                                        Source={x:Reference SignUpContentPage}}">
+            <CommonView:CommonSignupButton.IconImgSource>
+                <FontImageSource
+                    FontFamily="FontAwesomeBrands"
+                    Glyph="{StaticResource Facebook}"
+                    Size="30"
+                    Color="{StaticResource White}"/>
+            </CommonView:CommonSignupButton.IconImgSource>
+        </CommonView:CommonSignupButton>
+
+        <CommonView:CommonSignupButton
+            SignUpLabelMessage="Join Free With Microsoft"
+            FrameBackColor="{StaticResource MicrosoftYellowColor}"
+            LabelMessageTextColor="{StaticResource WhiteTextColor}">
+            <!--<CommonView:CommonSignupButton.IconImgSource>
+                <IconBrands:IconSource
+                    Icon="Microsoft"
+                    Size="20"
+                    Color="{StaticResource WhiteColor}" />
+            </CommonView:CommonSignupButton.IconImgSource>-->
+        </CommonView:CommonSignupButton>
+
+        <CommonView:CommonSignupButton
+            SignUpLabelMessage="Join Free With Linkedin"
+            FrameBackColor="{StaticResource LinkedinColor}"
+            LabelMessageTextColor="{StaticResource WhiteColor}">
+            <!--<CommonView:CommonSignupButton.IconImgSource>
+                <IconBrands:IconSource
+                    Icon="Linkedin"
+                    Size="20"
+                    Color="{StaticResource WhiteColor}" />
+            </CommonView:CommonSignupButton.IconImgSource>-->
+        </CommonView:CommonSignupButton>
+
+        <CommonView:CommonSignupButton
+            SignUpLabelMessage="Join Free With Instagram"
+            FrameBackColor="{StaticResource InstagramOrangeColor}"
+            LabelMessageTextColor="{StaticResource WhiteTextColor}">
+            <!--<CommonView:CommonSignupButton.IconImgSource>
+                <IconBrands:IconSource
+                    Icon="Instagram"
+                    Size="20"
+                    Color="{StaticResource WhiteColor}" />
+            </CommonView:CommonSignupButton.IconImgSource>-->
+        </CommonView:CommonSignupButton>
+
+        <CommonView:CommonSignupButton
+            SignUpLabelMessage="Join Free With Apple"
+            FrameBackColor="{StaticResource BlackTransparentTextColor}"
+            LabelMessageTextColor="{StaticResource WhiteTextColor}"
+            FrameTappedCommand="{Binding Path=BindingContext.AppleClickedCommand, Source={x:Reference SignUpContentPage}}">
+            <CommonView:CommonSignupButton.IconImgSource>
+               <FontImageSource
+                    FontFamily="FontAwesomeBrands"
+                    Glyph="{StaticResource Apple}"
+                    Size="30"
+                    Color="{StaticResource White}" />
+            </CommonView:CommonSignupButton.IconImgSource>
+        </CommonView:CommonSignupButton>
+    </VerticalStackLayout>
+</ContentPage>
